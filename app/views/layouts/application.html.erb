@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Cs60Okinawa</title>
+    <title>CS60那覇 リボーン | <%= yield(:page_title) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -16,61 +16,53 @@
     <nav id="sidebar-wrapper">
       <ul class="sidebar-nav">
         <li class="sidebar-brand">
-          <a class="js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+          <a class="js-scroll-trigger" href="#page-top">CS60那覇 リボーン</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#page-top">Home</a>
+          <a class="js-scroll-trigger" href="#about">CS60とは</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#about">About</a>
+          <a class="js-scroll-trigger" href="#services">施術内容</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#services">Services</a>
+          <a class="js-scroll-trigger" href="#reactions">体験談</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
+          <a class="js-scroll-trigger" href="#staff">施術者</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#contact">Contact</a>
+          <a class="js-scroll-trigger" href="#callout">店舗情報</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#map">地図</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#contact">ご予約・お問合せ</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="http://cs60.okinawa/blog">スタッフブログ</a>
         </li>
       </ul>
     </nav>
 
-    <!-- Header -->
-    <header class="masthead d-flex">
-      <div class="container text-center my-auto">
-        <h1 class="mb-1">Stylish Portfolio</h1>
-        <h3 class="mb-5">
-          <em>A Free Bootstrap Theme by Start Bootstrap</em>
-        </h3>
-        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
-      </div>
-      <div class="overlay"></div>
-    </header>
-
     <%= yield %>
 
     <!-- Footer -->
-    <footer class="footer text-center">
+    <footer class="footer bg-light text-center">
       <div class="container">
         <ul class="list-inline mb-5">
           <li class="list-inline-item">
-            <a class="social-link rounded-circle text-white mr-3" href="#!">
+            <a class="social-link rounded-circle text-white mr-3" href="http://cs60.okinawa/blog/">
+              <i class="icon-feed"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white mr-3" href="https://www.facebook.com/cs60reborn/">
               <i class="icon-social-facebook"></i>
             </a>
           </li>
-          <li class="list-inline-item">
-            <a class="social-link rounded-circle text-white mr-3" href="#!">
-              <i class="icon-social-twitter"></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a class="social-link rounded-circle text-white" href="#!">
-              <i class="icon-social-github"></i>
-            </a>
-          </li>
         </ul>
-        <p class="text-muted small mb-0">Copyright &copy; Your Website 2020</p>
+        <p class="text-muted small mb-0">Copyright &copy; CS60那覇 リボーン <%= Date.today.year %></p>
       </div>
     </footer>
 
