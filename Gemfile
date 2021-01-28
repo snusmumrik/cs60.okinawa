@@ -62,3 +62,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'high_voltage', '~> 3.1'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'faraday'
+gem 'nokogiri'

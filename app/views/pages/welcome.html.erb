@@ -314,11 +314,32 @@
           <p class="mb-0">
             CS60 認定施術者<br>
             オラクルカード リーダー<br>
-            <%= link_to "ブログ", "http://blog.cs60.okinawa/tag/akimoto/", class:"btn btn-light btn-sm" %>
           </p>
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="container">
+    <div class="content-section-heading text-center">
+      <h4 class="mb-5">最近の投稿</h4>
+    </div>
+
+    <div class="row mb-5">
+      <% @articles.each do |article| %>
+        <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+          <h4>
+            <strong><%= link_to article["title"]["rendered"], article["link"], class: "text-white" %></strong>
+          </h4>
+          <%=  link_to Nokogiri::HTML.parse(article["content"]["rendered"], nil, 'utf-8').at_css("body").text.gsub(/(\r\n|\r|\n|\f|\t)/, "")[0,100]+"...", article["link"], class: "text-white" %>
+          <p class="lead mt-4 mb-4 text-right">
+            <%= link_to Time.parse(article["date"]).strftime("%Y年%m月%d日"), article["link"], class: "text-white" %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+
+  <div class="container">
     <div class="row text-center">
       <div class="col-lg-10 mx-auto">
         <a class="btn btn-light btn-xl js-scroll-trigger" href="#callout">お店はこちらです</a>
