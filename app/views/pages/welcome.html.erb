@@ -118,13 +118,13 @@
           僕も移動が多いことから腰痛持ちで、旅先で自分が施術できるあらゆる機器を試しまくって一番効果があったのが<a href="https://bit.ly/37RAlRM">「CS60パーソナルモデル」</a>です。いまや、筋トレ中も手放せなくなりました。機内でもずっと使っています。
         </p>
         <p class="mb-4 text-right">
-          <%= link_to "高城未来研究所", "https://www.mag2.com/m/0001299071.html" %> Vol.451 Q&Aより
+          <%= link_to "高城未来研究所", "https://www.mag2.com/m/0001299071.html", target: :_blank, rel: "noopener noreferrer" %> Vol.451 Q&Aより
         </p>
         <p class="lead mb-4 text-left">
           CS60はもう間も無く、全世界的に大ブレイクします。厚生労働省も知ってるんですよ。東京大学医学部もみんな知ってるんですよ。でも誰も言わない（ 神馬氏除く）。なぜか。
         </p>
         <p class="text-right">
-          <%= link_to "原田武夫国際戦略情報研究所", "https://www.youtube.com/watch?v=c2sKVt4URvw" %><br>
+          <%= link_to "原田武夫国際戦略情報研究所", "https://www.youtube.com/watch?v=c2sKVt4URvw", target: :_blank, rel: "noopener noreferrer" %><br>
           原田武夫の道中辻斬り Vol. 64 7:30頃より
         </p>
       </div>
@@ -146,9 +146,9 @@
           それがいちばん効果を実感した出来事です。
         </p>
         <p class="text-right">
-          <%= link_to "吉本ばななさんインタビュー 前編", "https://www.cs60.com/newsletter-vol-31/" %>
-          <%= link_to "中編", "https://www.cs60.com/newsletter-vol-32/" %>
-          <%= link_to "後編", "https://www.cs60.com/newsletter-vol-33/" %>より
+          <%= link_to "吉本ばななさんインタビュー 前編", "https://www.cs60.com/newsletter-vol-31/", target: :_blank, rel: "noopener noreferrer" %>
+          <%= link_to "中編", "https://www.cs60.com/newsletter-vol-32/", target: :_blank, rel: "noopener noreferrer" %>
+          <%= link_to "後編", "https://www.cs60.com/newsletter-vol-33/", target: :_blank, rel: "noopener noreferrer" %>より
         </p>
       </div>
     </div>
@@ -329,11 +329,11 @@
       <% @articles.each do |article| %>
         <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
           <h4>
-            <strong><%= link_to article["title"]["rendered"], article["link"], class: "text-white" %></strong>
+            <strong><%= link_to article["title"]["rendered"], article["link"], class: "text-white", target: :_blank, rel: "noopener noreferrer" %></strong>
           </h4>
-          <%=  link_to Nokogiri::HTML.parse(article["content"]["rendered"], nil, 'utf-8').at_css("body").text.gsub(/(\r\n|\r|\n|\f|\t)/, "")[0,100]+"...", article["link"], class: "text-white" %>
+          <%=  link_to Nokogiri::HTML.parse(article["content"]["rendered"], nil, 'utf-8').at_css("body").text.gsub(/(\r\n|\r|\n|\f|\t)/, "")[0,100]+"...", article["link"], class: "text-white", target: :_blank, rel: "noopener noreferrer" %>
           <p class="lead mt-4 mb-4 text-right">
-            <%= link_to Time.parse(article["date"]).strftime("%Y年%m月%d日"), article["link"], class: "text-white" %>
+            <%= link_to Time.parse(article["date"]).strftime("%Y年%m月%d日"), article["link"], class: "text-white", target: :_blank, rel: "noopener noreferrer" %>
           </p>
         </div>
       <% end %>
@@ -357,7 +357,7 @@
       <p><i class="icon-direction"></i> <a class="js-scroll-trigger" href="#map">沖縄県那覇市上之屋1-17-22-201</a></p>
       <p><i class="icon-phone"></i> <a href="tel:+81-80-7313-5145">080-7313-5145</a></p>
       <p><i class="icon-envelope"></i> <a href="mailto:reborn@cs60.okinawa">reborn@cs60.okinawa</a></p>
-      <p><i class="icon-clock"></i> 営業時間 10:00am-8:00pm</p>
+      <p><i class="icon-clock"></i>営業時間 10:00am-8:00pm（月曜定休日）</p>
       <p>駐車場有り（ご予約時に詳細をお伝え致します） </p>
       <p>各種クレジットカード、PAY PAYご利用頂けます</p>
       <p>サロンまでお越しいただくのが難しい場合は、出張施術もご相談ください</p>
